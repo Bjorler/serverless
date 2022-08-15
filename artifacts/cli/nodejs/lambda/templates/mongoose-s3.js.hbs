@@ -1,0 +1,14 @@
+import { MongooseS3Resolver } from "@resolvers/mongoose-s3.resolver";
+{{#if lambdaModule}}import { {{lambdaModule}}Schema } from "@schemas/{{lambdaModule}}.schema";{{/if}}
+{{#if validatorName}}import { {{validatorName}} } from "@validators/{{lambdaModule}}/{{fileName}}.validator";{{/if}}
+
+const {{functionName}} = async(event, db, s3) => {
+    
+}
+
+export const handler = MongooseS3Resolver({{functionName}}, {
+    schemas: [{{#if lambdaModule}}{{lambdaModule}}Schema{{/if}}],
+    {{#if validatorName}}
+    validate: {{validatorName}},
+    {{/if}}
+});

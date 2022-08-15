@@ -1,0 +1,10 @@
+{
+    "name": "novo-eventos-2",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {
+        "deploy": "sls deploy -c layers.yml",
+        "deploy:end": "mv aws/nodejs/package.json aws/nodejs/spackage.json & mv aws-lambda/nodejs/package.json aws-lambda/nodejs/spackage.json & mv core/nodejs/package.json core/nodejs/spackage.json & mv exceljs/nodejs/package.json exceljs/nodejs/spackage.json & mv mongoose/nodejs/package.json mongoose/nodejs/spackage.json & mv generate-password/nodejs/package.json generate-password/nodejs/spackage.json",
+        "deploy:start": "mv aws/nodejs/spackage.json aws/nodejs/package.json & mv aws-lambda/nodejs/spackage.json aws-lambda/nodejs/package.json & mv core/nodejs/spackage.json core/nodejs/package.json & mv exceljs/nodejs/spackage.json exceljs/nodejs/package.json & mv mongoose/nodejs/spackage.json mongoose/nodejs/package.json & mv generate-password/nodejs/spackage.json generate-password/nodejs/package.json"
+    }
+}

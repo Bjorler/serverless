@@ -1,0 +1,17 @@
+service: novo-eventos-2
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  environment: ${file(./environments/env.${opt:stage,"local"}.json)}
+
+plugins:
+  - ./artifacts/plugins/nodejs/set-modules.js
+  - serverless-functions-base-path
+  - serverless-webpack
+  - serverless-offline
+
+custom:
+  functionsBasePath: ./lambdas
+  webpack:
+    packager: yarn

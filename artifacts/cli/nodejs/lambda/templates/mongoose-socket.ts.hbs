@@ -1,0 +1,10 @@
+import { MongooseSocketResolver, ApiEvent, MongooseDb, ApiSocket } from "@resolvers/mongoose-socket.resolver";
+{{#if lambdaModule}}import { {{lambdaModule}}Schema, I{{interfaceName}} } from "@schemas/{{lambdaModule}}.schema";{{/if}}
+
+const {{functionName}} = async(event: ApiEvent, db: MongooseDb, socket: ApiSocket<I{{interfaceName}}>) => {
+    
+}
+
+export const handler = MongooseSocketResolver({{functionName}}, {
+    schemas: [{{#if lambdaModule}}{{lambdaModule}}Schema{{/if}}]
+});

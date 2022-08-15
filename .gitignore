@@ -1,0 +1,13 @@
+yarn.lock
+package_error
+node_modules/
+.webpack/
+.serverless/
+artifacts/**/nodejs/package-lock.json
+artifacts/**/nodejs/package.json
+artifacts/**/nodejs/spackage.json
+environments/env.dev.json
+environments/env.qa.json
+environments/env.pre.json
+environments/env.prod.json
+environments/env.demo.json

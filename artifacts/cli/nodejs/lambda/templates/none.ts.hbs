@@ -1,0 +1,8 @@
+import { Use, bodyParser, ApiEvent } from "@octopy/serverless-core";
+
+const {{functionName}} = async(event: ApiEvent, context: any) => {
+    
+}
+
+export const handler = Use({{functionName}})
+    .use(bodyParser())

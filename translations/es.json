@@ -1,0 +1,38 @@
+{
+    "success": {
+        "status": 200,
+        "message": "Operación realizada con éxito"
+    },
+    "duplicate": {
+        "status": 201,
+        "message": "Ya existe un registro con esta información"
+    },
+    "validation": {
+        "status": 202,
+        "message": "No todas las validaciones del formulario se cumplieron"
+    },
+    "wrong": {
+        "status": 203,
+        "message": "Petición incorrecta"
+    },
+    "error": {
+        "status": 204,
+        "message": "Ocurrió un problema inesperado"
+    },
+    "unauthorized": {
+        "status": 205,
+        "message": "No está autorizado"
+    },
+    "forbbiden": {
+        "status": 206,
+        "message": "No tiene los permisos para acceder a este recurso"
+    },
+    "not_found": {
+        "status": 207,
+        "message": "No se encontró el recurso esperado"
+    },
+    "auth_failed": {
+        "status": 208,
+        "message": "Email o contraseña incorrectos"
+    }
+}

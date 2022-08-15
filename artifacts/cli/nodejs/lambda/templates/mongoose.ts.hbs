@@ -1,0 +1,14 @@
+import { MongooseResolver, ApiEvent, MongooseDb, BaseModel } from "@resolvers/mongoose.resolver";
+{{#if lambdaModule}}import { {{lambdaModule}}Schema, I{{interfaceName}} } from "@schemas/{{lambdaModule}}.schema";{{/if}}
+{{#if validatorName}}import { {{validatorName}}, I{{validatorName}} } from "@validators/{{lambdaModule}}/{{fileName}}.validator";{{/if}}
+
+const {{functionName}} = async(event: ApiEvent{{#if validatorName}}<I{{validatorName}}>{{/if}}, db: MongooseDb) => {
+    
+}
+
+export const handler = MongooseResolver({{functionName}}, {
+    schemas: [{{#if lambdaModule}}{{lambdaModule}}Schema{{/if}}],
+    {{#if validatorName}}
+    validate: {{validatorName}},
+    {{/if}}
+});

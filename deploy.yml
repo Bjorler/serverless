@@ -1,0 +1,31 @@
+service: serverless-project
+
+package:
+  individually: false
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  environment: ${file(./environments/env.${opt:stage,"local"}.json)}
+
+plugins:
+  - serverless-functions-base-path
+  - serverless-webpack
+
+custom:
+  functionsBasePath: ./lambdas
+  webpack:
+    packager: yarn  
+    stats: 'errors-only'
+
+functions:
+  - tokenAuthorizer:
+      handler: ../auth/token-authorizer.handler
+
+resources:
+  Resources:
+    SharedGW:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Name: serverless-project-${opt:stage,"dev"}
+

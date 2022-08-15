@@ -1,0 +1,70 @@
+service: novo-eventos-2-layers
+
+provider:
+  name: aws
+
+layers:
+  
+  aws:
+    path: aws
+    name: novo-eventos-2-aws
+    description: '@octopy/serverless-aws'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x
+  
+  aws-lambda:
+    path: aws-lambda
+    name: novo-eventos-2-aws-lambda
+    description: '@octopy/serverless-aws-lambda'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x
+
+  core:
+    path: core
+    name: novo-eventos-2-core
+    description: '@octopy/serverless-core'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x
+
+  exceljs:
+    path: exceljs
+    name: novo-eventos-2-exceljs
+    description: '@octopy/serverless-exceljs'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x
+
+  jsonwebtoken:
+    path: jsonwebtoken
+    name: novo-eventos-2-jsonwebtoken
+    description: '@octopy/serverless-jsonwebtoken'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x
+
+  mongoose:
+    path: mongoose
+    name: novo-eventos-2-mongoose
+    description: '@octopy/serverless-mongoose'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x
+
+  nodemailer:
+    path: nodemailer
+    name: novo-eventos-2-nodemailer
+    description: '@octopy/serverless-nodemailer'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x
+      
+  generate-password:
+    path: generate-password
+    name: novo-eventos-2-generate-password
+    description: '@octopy/serverless-generate-password'
+    retain: true
+    compatibleRuntimes:
+      - nodejs14.x

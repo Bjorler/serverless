@@ -1,0 +1,38 @@
+{
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": "./",
+        "rootDir": "./",
+        "outDir": "./dist",
+        "resolveJsonModule": true,
+        // "strictNullChecks": false,
+        "paths": {
+            "@resolvers/*": ["resolvers/*"],
+            "@schemas/*": ["schemas/*"],
+            "@helpers/*": ["helpers/*"],
+            "@validators/*": ["validators/*"],
+            "@translations/*": ["translations/*"],
+            "@octopy/serverless-core": ["artifacts/core/nodejs"],
+            "@octopy/serverless-core/*": ["artifacts/core/nodejs/*"],
+            "@octopy/serverless-mongoose": ["artifacts/mongoose/nodejs"],
+            "@octopy/serverless-mongoose/*": ["artifacts/mongoose/nodejs/*"],
+            "@octopy/serverless-aws": ["artifacts/aws/nodejs"],
+            "@octopy/serverless-aws/*": ["artifacts/aws/nodejs/*"],
+            "@octopy/serverless-aws-lambda": ["artifacts/aws-lambda/nodejs"],
+            "@octopy/serverless-aws-lambda/*": ["artifacts/aws-lambda/nodejs/*"],
+            "@octopy/serverless-csv-writer": ["artifacts/csv-writer/nodejs"],
+            "@octopy/serverless-csv-writer/*": ["artifacts/csv-writer/nodejs/*"],
+            "@octopy/serverless-exceljs": ["artifacts/exceljs/nodejs"],
+            "@octopy/serverless-exceljs/*": ["artifacts/exceljs/nodejs/*"],
+            "@octopy/serverless-jsonwebtoken": ["artifacts/jsonwebtoken/nodejs"],
+            "@octopy/serverless-jsonwebtoken/*": ["artifacts/jsonwebtoken/nodejs/*"],
+            "@octopy/serverless-nodemailer": ["artifacts/nodemailer/nodejs"],
+            "@octopy/serverless-nodemailer/*": ["artifacts/nodemailer/nodejs/*"],
+            "@octopy/serverless-generate-password": ["artifacts/generate-password/nodejs"],
+            "@octopy/serverless-generate-password/*": ["artifacts/generate-password/nodejs/*"]
+        }
+    },
+    "include": ["lambdas", "resolvers", "schemas", "auth", "validators"],
+    "exclude": ["node_modules"]
+}
