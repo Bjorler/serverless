@@ -6,6 +6,9 @@
         "rootDir": "./",
         "outDir": "./dist",
         "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "emitDecoratorMetadata": true,
         // "strictNullChecks": false,
         "paths": {
             "@resolvers/*": ["resolvers/*"],

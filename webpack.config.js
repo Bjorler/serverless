@@ -12,11 +12,11 @@ module.exports = {
         minimize: true
     },
     plugins: [
-        new CopyPlugin({
+        /*new CopyPlugin({
             patterns: [
-                "templates/**.handlebars"
+                //"templates/**.handlebars"
             ],
-        }),
+        }),*/
     ],
     resolve: {
         extensions: ['.ts', '.js'],

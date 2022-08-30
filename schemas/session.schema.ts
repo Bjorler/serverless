@@ -1,18 +1,18 @@
 import { BaseSchema, Schema } from "@octopy/serverless-mongoose"
 
 export interface ISession {
-    user_id: string
+    //user_id: string
     email: string
     token: string
     created: Date
 }
 
 const schema = new BaseSchema<ISession>({
-    user_id: {
+    /*user_id: {
         type: Schema.Types.ObjectId,
         ref: 'user',
         required: true
-    },
+    },*/
     email: {
         type: String,
         required: true

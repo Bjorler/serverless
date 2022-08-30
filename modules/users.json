@@ -1,0 +1,52 @@
+{
+  "functions": {
+    "listUsers": {
+      "handler": "users/list.handler",
+      "events": [
+        {
+          "http": {
+            "path": "users/list",
+            "method": "get",
+            "cors": true
+          }
+        }
+      ]
+    },
+    "createUsers": {
+      "handler": "users/create.handler",
+      "events": [
+        {
+          "http": {
+            "path": "users/create",
+            "method": "post",
+            "cors": true
+          }
+        }
+      ]
+    },
+    "updateUsers": {
+      "handler": "users/update.handler",
+      "events": [
+        {
+          "http": {
+            "path": "users/update/{id}",
+            "method": "put",
+            "cors": true
+          }
+        }
+      ]
+    },
+    "deleteUsers": {
+      "handler": "users/delete.handler",
+      "events": [
+        {
+          "http": {
+            "path": "users/delete/{id}",
+            "method": "delete",
+            "cors": true
+          }
+        }
+      ]
+    }
+  }
+}

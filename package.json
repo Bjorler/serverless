@@ -7,7 +7,9 @@
     "lambda": "node artifacts/cli/nodejs/lambda.js",
     "package:dev": "sls package -c deploy.yml -s dev",
     "deploy:dev": "sls deploy -c deploy.yml -s dev",
-    "dev": "sls offline -s local"
+    "dev": "sls offline -s local",
+    "dev:user": "sls offline -s local --param=user",
+    "dev:users": "sls offline -s local --param=users"
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
@@ -44,11 +46,14 @@
     "csv-writer": "^1.6.0",
     "exceljs": "^4.3.0",
     "fs-extra": "^10.1.0",
+    "generate-password": "^1.7.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.0",
+    "mysql": "^2.18.1",
     "nodemailer": "^6.7.5",
     "nodemailer-express-handlebars": "^5.0.0",
+    "reflect-metadata": "^0.1.13",
     "text-case": "^1.0.9",
-    "generate-password": "^1.7.0"
+    "typeorm": "^0.3.9"
   }
 }
