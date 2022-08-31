@@ -24,11 +24,11 @@ export const MySQLResolver = (
 
         db = new DataSource({
             type: "mysql",
-            host: "localhost",
-            port: 3306,
-            username: "root",
-            password: "",
-            database: "test",
+            host: process.env.SQL_HOST,
+            port: Number (process.env.SQL_PORT),
+            username: process.env.SQL_USER,
+            password: process.env.SQL_PASSWORD,
+            database: process.env.SQL_DB,
             // entities: [__dirname + "../entities/*.entity.{js,ts}"],
             entities: getMetadataArgsStorage().tables.map((tbl) => tbl.target),
             synchronize: true,
